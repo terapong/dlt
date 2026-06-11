@@ -22,11 +22,21 @@ public class HomeController {
 	@Autowired
 	private ProductRepository productRepo;
 	
-	@GetMapping("/")
-	public String home(Model m) {
+	@GetMapping({"", "/"})
+	public String index(Model m) {
 		List<Products> list = productRepo.findAll();
 		m.addAttribute("all_products", list);
 		return "index";
+	}
+	
+	@GetMapping({"/contact"})
+	public String contact() {
+		return "contact";
+	}
+	
+	@GetMapping({"/privacy"})
+	public String privacy() {
+		return "privacy";
 	}
 	
 	@GetMapping("/load_form")
