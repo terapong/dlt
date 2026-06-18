@@ -7,10 +7,8 @@
 
 	<!-- Start body -->
 	<div class="container p-5">
-	
 		<div class="row">
-			<!-- <div class="col-md-8 offset-md-2"> -->
-			<div>
+			<div class="col-md-8 offset-md-2">
 				<div class="card">
 
 					<div th:if="${session.msg}">
@@ -20,7 +18,7 @@
 					</div>
 
 					<div class="card-header">
-						<a th:href="@{/register}" href="load_form" class="btn btn-primary">เพิ่ม เจ้าหน้าที่</a>
+						<a href="load_form" class="btn btn-primary">Add Products</a>
 					</div>
 
 					<div class="card-body">
@@ -29,19 +27,20 @@
 							<thead>
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Email</th>
-									<th scope="col">First Name</th>
-									<th scope="col">Last Name</th>
-									<th scope="col">Password</th>
+									<th scope="col">Name</th>
+									<th scope="col">Description</th>
+									<th scope="col">Price</th>
+									<th scope="col">Quantity</th>
+									<th scope="col">Action</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="p : ${all_users}">
+								<tr th:each="p : ${all_products}">
 									<th scope="row">[[${p.id}]]</th>
-									<td>[[${p.email}]]</td>
-									<td>[[${p.firstName}]]</td>
-									<td>[[${p.lastName}]]</td>
-									<td>[[${p.password}]]</td>
+									<td>[[${p.productName}]]</td>
+									<td>[[${p.description}]]</td>
+									<td>[[${p.price}]]</td>
+									<td>[[${p.quantity}]]</td>
 									<td><a th:href="@{'/edit_form/'+${p.id}}"
 										class="btn btn-sm btn-primary">Edit</a> <a
 										th:href="@{'/delete/'+${p.id}}" class="btn btn-sm btn-danger">Delete</a></td>
