@@ -32,7 +32,6 @@
 									<th scope="col">Email</th>
 									<th scope="col">First Name</th>
 									<th scope="col">Last Name</th>
-									<th scope="col">Password</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -41,7 +40,6 @@
 									<td>[[${p.email}]]</td>
 									<td>[[${p.firstName}]]</td>
 									<td>[[${p.lastName}]]</td>
-									<td>[[${p.password}]]</td>
 									<td><a th:href="@{'/edit_form/'+${p.id}}"
 										class="btn btn-sm btn-primary">Edit</a> <a
 										th:href="@{'/delete/'+${p.id}}" class="btn btn-sm btn-danger">Delete</a></td>
