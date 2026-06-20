@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.dropdown-menu li {
+	position: relative;
+}
+
+.dropdown-menu .submenu {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: -7px;
+}
+
+.dropdown-menu>li:hover>.submenu {
+	display: block;
+}
+
+.my-btn {
+  /* ดีไซน์ปุ่มเริ่มต้น */
+  background-color: #3498db; /* สีพื้นหลังตอนแรก (สีฟ้า) */
+  color: #ffffff; /* สีตัวอักษรตอนแรก (สีขาว) */
+  padding: 12px 24px; /* ขนาดช่องไฟในปุ่ม */
+  border: none; /* เอาเส้นขอบออก */
+  border-radius: 5px; /* ทำมุมปุ่มให้มน */
+  font-size: 16px; /* ขนาดตัวอักษร */
+  cursor: pointer; /* เปลี่ยนรูปเมาส์เป็นรูปนิ้วมือ */
+  transition: 0.3s; /* เพิ่มความนุ่มนวลตอนเปลี่ยนสี (0.3 วินาที) */
+}
+
+.my-btn:hover {
+  /* ดีไซน์เมื่อเอาเมาส์ชี้ทับ */
+  background-color: #ffffff; /* สลับสีพื้นหลังเป็นสีขาว */
+  color: #3498db; /* สลับสีตัวอักษรเป็นสีฟ้า */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่มดูลอยขึ้น */
+}
+
+
+.flex-row {
+  display: flex;         /* Turns the div into a flex container */
+  gap: 15px;             /* Adds space between your columns */
+  
+  text-align: center;
+}
+
+.flex-column {
+  flex: 1;               /* Forces all columns to take up equal width */
+  padding: 10px;         /* Adds internal spacing for content */
+  background: #f0f0f0;   /* Light gray background to see the boxes */
+}
+

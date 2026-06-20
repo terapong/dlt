@@ -28,11 +28,11 @@ public class HomeController {
 	@Autowired
 	private UserRepository useerRepo;
 	
-	@GetMapping({"", "/"})
+	@GetMapping({"", "/user"})
 	public String viewHomePage(Model m) {
 		List<User> list = useerRepo.findAll();
 		m.addAttribute("all_users", list);
-		return "index";
+		return "user";
 	}
 		
 	@GetMapping("/register")
@@ -87,6 +87,18 @@ public class HomeController {
         useerRepo.save(user);
 //		session.setAttribute("msg", "Product Update Sucessfully..");
 		return "redirect:/";	
+	}
+	
+	@GetMapping({"", "/user_driver"})
+	public String viewuser_driverPage(Model m) {
+		
+		return "user_driver";
+	}
+	
+	@GetMapping({"", "/user_population"})
+	public String viewuser_populationPage(Model m) {
+		
+		return "user_population";
 	}
 	
 //	@GetMapping({"", "/"})
